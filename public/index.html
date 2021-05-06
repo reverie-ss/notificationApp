@@ -17,12 +17,21 @@
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "9a9cffdd-410c-45db-ada7-13bffda30867",
+        });
+      });
+    </script>
   </head>
   <body>
     <div id="message">
       <h2>Welcome</h2>
       Hello hi how are you
+      <div class='onesignal-customlink-container'></div>
     </div>
     <p id="load">Firebase SDK Loading&hellip;</p>
 
